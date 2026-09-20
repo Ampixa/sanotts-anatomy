@@ -1,19 +1,15 @@
 # sanoTTS — Inside a 294,279-Parameter TTS System
 
-**Distill your own tiny voice.** An interactive, scroll-driven walkthrough of
+An interactive, scroll-driven walkthrough of
 **sanoTTS**, a complete neural text-to-speech system small enough to run on
 microcontroller-class hardware (e.g. ESP32-S3). Every tensor shown on the page
 is a real intermediate value captured from the shipped int8 model while it
-synthesized an actual sentence — no mock-ups, no stand-in data.
+synthesized an actual sentence; no mock-ups, no stand-in data.
 
-- **Inside sanoTTS:** <https://ampixa.github.io/sanotts-anatomy/>
-- **sanoTTS Playground (Distill your own tiny voice
-):** <https://github.com/Ampixa/sanoTTS>
-  [eSpeak NG](https://github.com/espeak-ng/espeak-ng))
+- **sanoTTS Anatomy:** <https://ampixa.github.io/sanotts-anatomy>
+- **sanoTTS — Distill your own tiny voice:** <https://github.com/Ampixa/sanoTTS>
 
-![Demo](public/assets/site.gif)
-
-## What the site shows
+## What the anatomy shows
 
 The page follows the full synthesis pipeline, stage by stage:
 
@@ -52,16 +48,7 @@ npm run dev
 
 Then open the printed local URL (default <http://localhost:5173>).
 
-## Build
-
-```bash
-npm run build    # type-check + production bundle in dist/
-npm run preview  # serve the production build locally
-```
-
-The build is fully static: no cookies, no tracking, no server-side component.
-
-## How to read the page
+## How to read the anatomy page
 
 - **Left column** — the story. Scrolling it is the only thing that moves the
   pipeline stage on the right.
@@ -82,12 +69,7 @@ The build is fully static: no cookies, no tracking, no server-side component.
   come from the sanoTTS paper; `src/data/paperFacts.ts` maps each displayed
   number to the section or table where it is reported.
 
-
 ## License
 
-This project is open source under the
-[GNU General Public License v3.0](LICENSE) (GPL-3.0). sanoTTS builds on the
-work of [Piper](https://github.com/rhasspy/piper) and
-[eSpeak NG](https://github.com/espeak-ng/espeak-ng).
+This project is open source under the [GNU General Public License v3.0](LICENSE) (GPL-3.0).
 
-**Distill your own tiny voice:** <https://github.com/Ampixa/sanoTTS>
