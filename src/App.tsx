@@ -120,7 +120,7 @@ export default function App() {
               runtime is validated against bit-exact golden test vectors. The
               live demo runs the same engine compiled for the browser.
             </p>
-            <p className="faint">ampixa · sanotts viz · GPL-3.0 · static build, no cookies, no tracking</p>
+            <p className="faint">ampixa · sanotts anatomy · GPL-3.0 · static build, no cookies, no tracking</p>
           </div>
         </div>
 

@@ -1,4 +1,3 @@
-/* sanoTTS viz design tokens — aligned with ampixa / sanoTTS product sites */
 :root {
   --ink: #111;
   --bg: #fff;
@@ -165,11 +164,85 @@ table.facts thead th { border-bottom: 2px solid var(--ink); font-size: 12px; }
 table.facts .delta { color: var(--accent); }
 
 /* ---------- hero ---------- */
-#hero .wordmark { font-size: clamp(38px, 5.5vw, 64px); font-weight: bold; letter-spacing: -1px; margin: 0; }
+#hero .wordmark { font-size: clamp(38px, 5.5vw, 64px); font-weight: bold; letter-spacing: -1px; margin: 0; line-height: 1; }
 #hero .wordmark .tts { color: var(--accent); }
 #hero .tagline { color: var(--muted); font-size: 15px; margin-top: 10px; }
 .howto { border: 1px solid var(--rule); padding: 12px 14px; margin: 16px 0; font-size: 13px; background: #fff; }
 .howto b { color: var(--accent); }
+
+/* ---------- header row + github star box ---------- */
+.header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.github-menu { position: relative; margin-bottom: 10px; }
+
+.github-group {
+  display: inline-flex;
+  align-items: stretch;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+
+.github-star {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  color: var(--ink);
+  text-decoration: none;
+  border-right: 1px solid var(--rule);
+}
+.github-star svg { color: var(--accent); }
+.github-star .star-icon {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.2;
+  transition: fill 0.15s ease, stroke 0.15s ease;
+}
+.github-star:hover { background: var(--accent-soft); color: var(--accent); }
+.github-star:hover .star-icon { fill: var(--accent); stroke: var(--accent); }
+
+.github-dropdown-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 9px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--mono);
+}
+.github-dropdown-btn:hover { background: var(--accent-soft); color: var(--accent); }
+.github-dropdown-btn[aria-expanded="true"] { background: var(--accent); color: #fff; }
+
+.github-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  min-width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  box-shadow: 3px 3px 0 var(--accent-soft);
+  z-index: 30;
+}
+.github-dropdown a {
+  display: block;
+  padding: 7px 12px;
+  font-size: 12.5px;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--rule);
+}
+.github-dropdown a:last-child { border-bottom: none; }
+.github-dropdown a:hover { background: var(--accent-soft); color: var(--accent); }
 
 /* ================= schematic bar ================= */
 #schematic {
